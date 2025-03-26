@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMnJOE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1A1F22; /* Assuming dark background */
+            font-family: "Jersey 15", sans-serif;
+        }
+
+        /* Circle with image background */
+        .circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-top: 26px;
+            margin-left: 43px;
+            background-image: url('logoSam.png'); /* Replace with your image */
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Name "SAMnJOE" */
+        .name {
+            display: inline-block;
+            color: #9A0606;
+            font-family: "Jersey 15", sans-serif;
+            font-size: 40px;
+            margin-top: 26px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: inline-block;
+            margin-left: 630px;
+            vertical-align: middle;
+        }
+
+        .nav-item, .btn {
+            /* Remove text-decoration and set color */
+		    text-decoration: none;
+		    color: #FFFFFF;
+		    /* Keep your existing styles */
+		    display: inline-block;
+		    font-family: "Jersey 15", sans-serif;
+		    font-size: 26px;
+		    margin-right: 53px;
+		    cursor: pointer;
+		        }
+
+        /* Buttons */
+        .action-buttons {
+            display: inline-block;
+            margin-left: 73px;
+            vertical-align: middle;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: "Jersey 15", sans-serif;
+            font-size: 20px;
+            color: white;
+            background: none;
+            border: 5px solid white;
+            border-radius: 66px;
+            padding: 8px 20px;
+            margin-right: 33px;
+            cursor: pointer;
+        }
+		        .hero-image {
+		  width: 100%;
+		  height: 595px;
+		  margin-top: 30px;
+		  background-image: url('R.jpeg'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  position: relative;
+		}
+
+		.hero-text {
+		  font-family: 'Passion One', cursive;
+		  font-size: 60px;
+		  font-weight: bold;
+		  color: white;
+		  position: absolute;
+		  top: 250px;
+		  width: 100%;
+		  margin-left: 94px;
+		}
+				.rounded-image {
+		  width: 440px;
+		  height: 472px;
+		  border-radius: 1000px;
+		  opacity: 0.83;
+		  position: absolute;
+		  right: 69px;
+		  top: 349px;
+		  object-fit: cover; /* Ensures image fills container */
+		}
+				.red-container {
+		  position: absolute;
+		  top: 710px;
+		  left: 0;
+		  width: 1500px;
+		  height: 86px;
+		  background-color: #9A0606;
+		  z-index: -1; /* Ensures it stays behind other elements */
+		}
+				.menu-title {
+		  margin-top: calc(21px + 86px); 
+		  margin-left: 53px;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 60px;
+		  font-weight: regular;
+		  color: #FFFFFF;
+		}
+				/* Menu Grid Layout */
+		.menu-grid {
+		  display: grid;
+		  grid-template-columns: repeat(3, 397px);
+		  gap: 39px;
+		  justify-content: center;
+		  margin-top: 28px;
+		}
+
+		/* Individual Menu Item */
+		.menu-item {
+		  height: 547px;
+		  width: 397px;
+		  background-color: #9A0606;
+		  border-radius: 24px;
+		  padding: 8px 8px 0 8px;
+		  position: relative;
+		}
+
+		/* Food Image */
+		.food-image {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('ampesie.webp'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+
+		/* Food Name */
+		.food-name {
+		  color: white;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 60px;
+		  font-weight: regular;
+		  text-align: center;
+		}
+		.food-image1 {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('ampesie.webp'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+		.food-image2 {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('fufu2.jpg'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+		.food-image3 {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('gob3.jpg'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+		.food-image4 {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('banku.jpeg'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+		.food-image5 {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('braised.jpg'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+		.food-image6 {
+		  height: 401px;
+		  width: 96%;
+		  background-image: url('plain.jpg'); /* Replace with your image */
+		  background-size: cover;
+		  background-position: center;
+		  border-radius: 24px;
+		  padding-left: 8px;
+		  padding-right: 8px;
+		  
+		}
+
+		/* Price */
+		.price {
+		  position: absolute;
+		  right: 12px;
+		  bottom: 88px; /* 68px button height + 12px gap + 8px padding */
+		  color: white;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 30px;
+		  font-weight: regular;
+		  text-align: right;
+		}
+
+		/* Order Button */
+		.order-btn {
+		  width: 287px;
+		  height: 68px;
+		  background-color: white;
+		  border: none;
+		  border-radius: 24px;
+		  color: #2D3A42;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 60px;
+		  font-weight: regular;
+		  display: block;
+		  margin: 12px auto 0 auto;
+		  cursor: pointer;
+		}
+				/* About Title */
+		.about-title {
+		  margin-top: 56px;
+		  margin-left: 53px;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 60px;
+		  font-weight: regular;
+		  color: white;
+		}
+		.about-div{
+		margin-left: 290px;
+		}
+
+		/* About Text */
+		.about-text {
+		  margin-top: 26px;
+		  margin-left: 100;
+		  font-family: 'Jersey 15', sans-serif;
+		  font-size: 56px;
+		  font-weight: regular;
+		  color: white;
+		  line-height: 1.0;
+		}
+
+		/* About Image Container */
+		.about-image-container {
+		  position: absolute;
+		  top: 2400px;
+		  left: 897px;
+		}
+
+		/* About Image */
+		.about-image {
+		  width: 662px;
+		  height: 474px;
+		  border-radius: 50px;
+		  border: 10px solid #9A0606;
+		  object-fit: cover;
+		}
+				/* Gallery Title */
+		.gallery-title {
+		  position: absolute;
+		  top: 2960px;
+		  left: 53px;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 60px;
+		  font-weight: regular;
+		  color: white;
+		}
+
+		/* Top Divider */
+		.gallery-divider {
+		  height: 14px;
+		  width: 100%;
+		  background-color: #2D3A42;
+		  margin-top: 242px; /* Space below title */
+		}
+
+		/* Gallery Grid */
+		.gallery-grid {
+		  display: grid;
+		  grid-template-columns: repeat(3, 420px);
+		  gap: 20px; /* Handles spacing between all items */
+		  padding: 20px 0;
+		  justify-content: center;
+		  margin: 0 auto; /* Centers the entire grid */
+		}
+
+		/* Gallery Items */
+		.gallery-item {
+		  height: 415px;
+		  width: 400px;
+		  border: 8px solid #9A0606;
+		  border-radius: 35px;
+		  background-size: cover;
+		  background-position: center;
+		}
+
+				.bottom-divider {
+		  position: absolute;
+		  left: 53px;
+		  width: calc(100% - 53px);
+		  height: 25px;
+		  background-color: #9A0606;
+		  top: 4984px;
+		}
+
+				/* Blog Title */
+		.blog-title {
+		  margin-top: 110px; /* 20px below previous div */
+		  margin-left: 53px;
+		  font-family: 'Jersey 25', sans-serif;
+		  font-size: 60px;
+		  font-weight: regular;
+		  color: white;
+		}
+
+		/* Blog Text (Right-aligned) */
+		.blog-text {
+		  font-family: 'Hammersmith One', sans-serif;
+		  font-size: 35px;
+		  color: white;
+		  line-height: 1.4;
+		  text-align: right;
+		  width: calc(100% - 290px);
+		  float: left;
+		  margin-top: 0; /* REMOVE default top margin */
+		  margin-bottom: 0; /* Optional: Remove bottom margin too */
+		}
+
+		/* Blog Image Container */
+		.blog-image-container {
+		  position: absolute;
+		  top: 5170px;
+		  left: 286px;
+		}
+
+		/* Blog Image */
+		.blog-image {
+		  width: 534px;
+		  height: 471.5px;
+		  border-radius: 150px;
+		  border: 20px solid #9A0606;
+		  object-fit: cover;
+		}
+
+		/* Clearfix for text wrapping */
+		.blog-content::after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		/* Footer Container */
+		.footer {
+		  position: relative;
+		  height: 364px;
+		  width: 100%;
+		  background-color: black;
+		  color: white;
+		}
+
+		/* Contact Title */
+		.contact-title {
+		  position: absolute;
+		  bottom: 278px;
+		  left: 0;
+		  width: 100%;
+		  font-family: 'Inter', sans-serif;
+		  font-size: 40px;
+		  font-weight: 400;
+		  color: white;
+		  margin-left: 289px;
+		}
+
+		/* Contact Info */
+		.contact-info {
+		  position: absolute;
+		  bottom: 217px; /* 278px - 40px (title) - 31px gap */
+		  left: 289px;
+		  font-family: 'Inter', sans-serif;
+		  font-size: 20px;
+		  font-weight: 400;
+		  line-height: 1.3;
+		  margin: 0;
+		}
+
+				/* Footer Component Container */
+		.footer-comp {
+		  position: absolute;
+		  right: 101px; /* Matches original slogan position */
+		  bottom: 107px;
+		  width: 238px; /* Matches circle diameter */
+		}
+
+				.footer-circle {
+		  position: absolute;
+		  right: 363px;
+		  bottom: 117px;
+		  width: 238px;
+		  height: 238px;
+		  border-radius: 50%;
+		  background-image: url('logoSam.png');
+		  background-size: cover;
+		  background-position: center;
+		}
+
+		/* Footer Slogan */
+		.footer-slogan {
+		  position: absolute;
+		  right: 270px;
+		  bottom: 91px; /* 107px - 16px gap */
+		  font-family: 'Inter', sans-serif;
+		  font-size: 25px;
+		  font-weight: 400;
+		  color: white;
+		  width: 438px;
+		  text-align: center;
+		  margin: 0;
+		}
+		html {
+		    scroll-behavior: smooth;
+		}
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Circle with image -->
+    <div class="circle"></div>
+
+    <!-- Name "SAMnJOE" -->
+    <span class="name">SAMnJOE</span>
+
+    <!-- Navbar -->
+    <div class="navbar">
+    <a href="#home" class="nav-item">HOME</a>
+    <a href="#menu" class="nav-item">MENU</a>
+    <a href="#about" class="nav-item">ABOUT</a>
+    <a href="#gallery" class="nav-item">GALLERY</a>
+    <a href="#blog" class="nav-item">BLOG</a>
+</div>
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+    <a href="#menu" class="btn">ORDER ONLINE</a>
+    <a href="#contact" class="btn">RESERVATION</a>
+</div>
+    <div class="hero-image" id="home">
+  <div class="hero-text">EXPERIENCE<br> THE TASTE OF<br/> PERFECTION</div>
+</div>
+<div class="rounded-image-container">
+  <img src="lilspr.jpeg" alt="Rounded Image" class="rounded-image">
+</div>
+<div class="red-container"></div>
+<div class="menu-title" id="menu">OUR MENU</div>
+<div class="menu-grid">
+  <!-- Row 1 -->
+  <div class="menu-item">
+    <div class="food-image1"></div>
+    <div class="food-name">AMPESIE</div>
+    <div class="price">GHC<br/>25.00</div>
+    <button class="order-btn">ORDER</button>
+  </div>
+  
+  <!-- Repeat 5 more times -->
+  <div class="menu-item">
+    <div class="food-image2"></div>
+    <div class="food-name">FUFU</div>
+    <div class="price">GHC<br/>35.00</div>
+    <button class="order-btn">ORDER</button>
+  </div>
+  
+  <div class="menu-item">
+    <div class="food-image3"></div>
+    <div class="food-name">GOB3</div>
+    <div class="price">GHC<br/>20.00</div>
+    <button class="order-btn">ORDER</button>
+  </div>
+  
+  <!-- Row 2 -->
+  <div class="menu-item">
+    <div class="food-image4"></div>
+    <div class="food-name">BANKU</div>
+    <div class="price">GHC<br/>25.00</div>
+    <button class="order-btn">ORDER</button>
+  </div>
+  
+  <div class="menu-item">
+    <div class="food-image5"></div>
+    <div class="food-name"><span style="font-size: 50px;">BRAISED RICE</span></div>
+    <div class="price">GHC<br/>30.00</div>
+    <button class="order-btn">ORDER</button>
+  </div>
+  
+  <div class="menu-item">
+    <div class="food-image6"></div>
+    <div class="food-name"><span style="font-size: 50px;">PLAIN RICE</span></div>
+    <div class="price">GHC<br/>25.00</div>
+    <button class="order-btn">ORDER</button>
+  </div>
+</div>
+<div class="about-section" id="about">
+  <h2 class="about-title">ABOUT US</h2>
+  <div class="about-div"><p class="about-text">
+    At Sam and Joe Restaurant, we are passionate about delivering exceptional dining experiences.<br>
+    We focus on quality, flavour, and creating a warm, welcoming<br>
+     atmosphere. Join us to<br>experience
+    the perfect blend<br>
+    of taste and ambience.<br>
+    Sam & Joe Restaurant<br>
+    was founded in January<br>
+    2023 with the aim of<br>
+    providing good services<br>
+    to its customers.
+  </p>
+</div>
+</div>
+
+<div class="about-image-container">
+  <img src="fufu.jpg" alt="About Us Image" class="about-image">
+</div>
+<div class="gallery-section" id="gallery">
+  <h2 class="gallery-title">GALLERY</h2>
+  <div class="gallery-divider"></div>
+  
+  <div class="gallery-grid">
+    <!-- 12 Gallery Images -->
+    <div class="gallery-item" style="background-image: url('gly1.jpg')"></div>
+    <div class="gallery-item" style="background-image: url('ampesie1.webp')"></div>
+    <div class="gallery-item" style="background-image: url('ampesie2.webp')"></div>
+    <div class="gallery-item" style="background-image: url('banku.jpeg')"></div>
+    <div class="gallery-item" style="background-image: url('Banku.webp')"></div>
+    <div class="gallery-item" style="background-image: url('braised.jpg')"></div>
+    <div class="gallery-item" style="background-image: url('braised1.jpg')"></div>
+    <div class="gallery-item" style="background-image: url('gob32.jpg')"></div>
+    <div class="gallery-item" style="background-image: url('gob31.jpg')"></div>
+    <div class="gallery-item" style="background-image: url('banku1.jpg')"></div>
+    <div class="gallery-item" style="background-image: url('plain1.jpeg')"></div>
+    <div class="gallery-item" style="background-image: url('gly2.jpeg')"></div>
+  </div>
+  
+  <div class="bottom-divider"></div>
+</div>
+<div class="blog-section" id="blog">
+  <h2 class="blog-title">BLOG</h2>
+  <div class="blog-divider"></div>
+  
+  <div class="blog-content">
+    <p class="blog-text">
+      At Sam n Joe Restaurant, we bring you the heart and soul of Ghanaian cuisine,
+      <br/>serving delicious, home-cooked
+ <br/>meals made with love. From rich, 
+<br/>flavorful soups to perfectly spiced
+<br/> grills and local favorites like plain 
+<br/>rice, braised rice, fufu, and banku,
+ <br/>every dish is crafted to give you
+ <br/>an authentic taste of Ghana.
+<br/>Join us for a warm and welcoming 
+<br/>dining experience where good food
+ <br/>meets great company. Whether 
+<br/>you're craving a hearty meal or
+ <br/>a quick bite, Sam n Joe is the place to be!
+<br/>📍 Visit us today and taste the tradition! 🍽️🔥
+    </p>
+    <div class="blog-image-container">
+      <img src="blg.jpg" alt="Blog Image" class="blog-image">
+    </div>
+  </div>
+</div>
+<div class="footer" id="contact">
+  <div class="contact-content">
+    <h2 class="contact-title">contact us</h2>
+    <p class="contact-info">
+      Address: Omanhene Main St Agogoso<br>
+      Email: samjoerestaurant84@gmail.com<br>
+      Tel: +233 546 628 267 / +233 533 705 691
+    </p>
+  </div>
+  <div class="footer_comp">
+  <div class="footer-circle"></div>
+  <p class="footer-slogan">experience the taste of perfection</p>
+</div>
+</div>
+</body>
+</html>
